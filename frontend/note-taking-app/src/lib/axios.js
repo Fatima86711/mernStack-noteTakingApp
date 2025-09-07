@@ -6,4 +6,3 @@ const api = axios.create({
     : 'http://localhost:3000/api'
 })
 export default api;
-// https://mern-stack-note-taking-app-backend.vercel.app/
