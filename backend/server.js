@@ -4,7 +4,7 @@
     import 'dotenv/config'
     import ratelimiter from './middlewares/ratelimiter.js';
     import cors from 'cors'
-        connectDB();
+        // connectDB();
         const app = express();
         // app.use(cors({origin:"http://localhost:5713"}))
         app.use(cors({ origin: ['http://localhost:5173']  }));
@@ -21,13 +21,13 @@
 
 
 
-    // connectDB().then(()=>{
-    // app.listen(process.env.PORT,()=>{
-    // console.log("Server is Listening at: ", process.env.PORT) ;
-    // }
-    // })
-    
-     app.listen(process.env.PORT,()=>{
+    connectDB().then(()=>{
+    app.listen(process.env.PORT,()=>{
     console.log("Server is Listening at: ", process.env.PORT) ;
     })
+    })
+    
+    //  app.listen(process.env.PORT,()=>{
+    // console.log("Server is Listening at: ", process.env.PORT) ;
+    // })
     
