@@ -7,7 +7,7 @@
         // connectDB();
         const app = express();
         // app.use(cors({origin:"http://localhost:5713"}))
-        app.use(cors({ origin: ['http://localhost:5173']  }));
+        app.use(cors({ origin: ['http://localhost:5173','https://mern-stack-note-taking-app.vercel.app/']  }));
         app.use(express.json());
         app.use(ratelimiter);
         app.get('/',(req, res)=>{
